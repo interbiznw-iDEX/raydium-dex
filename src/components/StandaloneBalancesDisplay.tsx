@@ -43,9 +43,9 @@ export default function StandaloneBalancesDisplay() {
   const baseCurrencyAccount = useSelectedBaseCurrencyAccount();
   const quoteCurrencyAccount = useSelectedQuoteCurrencyAccount();
   const [tokenAccounts] = useTokenAccounts();
-  const baseCurrencyBalances = 
+  const baseCurrencyBalances =
     balances && balances.find((b) => b.coin === baseCurrency);
-  const quoteCurrencyBalances = 
+  const quoteCurrencyBalances =
     balances && balances.find((b) => b.coin === quoteCurrency);
 
   async function onSettleFunds() {
@@ -220,10 +220,10 @@ export default function StandaloneBalancesDisplay() {
           First time trading
         </div>
         <div style={{ fontSize: 16, color: '#F1F1F2' }}>
-          on Raydium?
+          on iDEX?
         </div>
         <a
-          href={'https://raydium.gitbook.io/raydium/'}
+          href={'https://idex.gitbook.io/idex/'}
           target="_blank"
           rel="noopener noreferrer"
           style={{ color : 'rgb(173,175,184)',}}

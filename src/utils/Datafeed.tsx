@@ -12,7 +12,7 @@ export const useTvDataFeed = () => {
 const makeDataFeed = () => {
   let subscriptions = {};
   const overTime = {};
-  const lastReqTime = {}; 
+  const lastReqTime = {};
 
   const getApi = async (url: string) => {
     try {
@@ -119,7 +119,7 @@ const makeDataFeed = () => {
       }
 
       if (from < 1609459200) from = 1609459200
-      
+
       const key = `${symbolInfo.market}--${resolution}`
 
       if (overTime[key] && overTime[key] > from) {
@@ -134,7 +134,7 @@ const makeDataFeed = () => {
 
         if (result.c.length === 0 ) {
           overTime[key] = to
-        } 
+        }
 
         onHistoryCallback(parseCandles(result), {
           nodeData: result.length === 0,
@@ -207,7 +207,7 @@ const makeDataFeed = () => {
           symbol: item.name,
           full_name: item.name,
           description: item.name,
-          exchange: 'Raydium',
+          exchange: 'iDEX',
           params: [],
           type: 'spot',
           ticker: item.name
@@ -300,15 +300,15 @@ const reduceTs = (ts: number, resolutionTv: string) => {
       return ts - 3600 * 24 * 5;
     case '7D':
       return ts - 3600 * 24 * 7;
-    case '1M': 
+    case '1M':
       return ts - 3600 * 24 * 31 * 1;
-    case '2M': 
+    case '2M':
       return ts - 3600 * 24 * 31 * 2;
-    case '3M': 
+    case '3M':
       return ts - 3600 * 24 * 31 * 3;
-    case '6M': 
+    case '6M':
       return ts - 3600 * 24 * 31 * 6;
-    case '1Y': 
+    case '1Y':
       return ts - 3600 * 24 * 31 * 12;
     default:
       throw Error(`reduceTs resolution error: ${resolutionTv}`)
@@ -347,15 +347,15 @@ export const convertResolutionToApi = (resolution: string) => {
       return '5d';
     case '7D':
       return '7d';
-    case '1M': 
+    case '1M':
       return '1m';
-    case '2M': 
+    case '2M':
       return '2m';
-    case '3M': 
+    case '3M':
       return '3m';
-    case '6M': 
+    case '6M':
       return '6m';
-    case '1Y': 
+    case '1Y':
       return '1y';
     default:
       throw Error(`convertResolutionToApi resolution error: ${resolution}`)

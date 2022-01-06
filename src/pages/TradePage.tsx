@@ -83,7 +83,7 @@ function TradePageInner() {
   });
 
   useEffect(() => {
-    document.title = marketName ? `${marketName} — Raydium` : 'Raydium';
+    document.title = marketName ? `${marketName} — iDEX` : 'iDEX';
   }, [marketName]);
 
   const changeOrderRef = useRef<
@@ -349,7 +349,7 @@ const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
       </Col>
 
       <Col
-        flex="15%" 
+        flex="15%"
         style={{ height: '100%', minWidth: '280px' }}>
         <Orderbook smallScreen={false} onPrice={onPrice} onSize={onSize} />
         <TradesTable smallScreen={false} />
