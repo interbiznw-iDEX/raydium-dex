@@ -2,7 +2,7 @@
   "name": "raydium-dex-ui",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dex.interbiznw.dev"
+  "homepage": "https://dex.interbiznw.dev",
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
     "@craco/craco": "^5.6.4",
